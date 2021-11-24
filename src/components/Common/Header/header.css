@@ -1,0 +1,45 @@
+header.ant-layout-header {
+    background-color: white;
+    position: "fixed";
+    z-index: 1;
+    width: "100%";
+    height: unset;
+}
+
+header.ant-layout-header .wrap-logo {
+    display: flex;
+}
+header.ant-layout-header .logo {
+    height: 64px;
+    width: 64px;
+    float: left;
+    background-repeat: no-repeat;
+    background: url("/src/assets/images/logo.png");
+    background-size: contain;
+}
+header.ant-layout-header .wrap-form {
+    align-self: center;
+}
+header.ant-layout-header .ant-menu {
+    margin-left: auto;
+    margin-right: auto;
+}
+header.ant-layout-header .wrap-avatar .ant-avatar {
+    margin-right: 0.5em;
+}
+header.ant-layout-header .wrap-tools ul.ant-menu {
+    justify-content: center;
+    background: transparent;
+}
+
+header.ant-layout-header .wrap-tools ul.ant-menu .ant-menu-item {
+    color: #000;
+}
+
+header.ant-layout-header .wrap-tools ul.ant-menu .ant-menu-item-selected {
+    background: transparent;
+    color: #2374e1;
+}
+header.ant-layout-header .wrap-tools ul.ant-menu .ant-menu-item-active:hover {
+    background: transparent;
+}
