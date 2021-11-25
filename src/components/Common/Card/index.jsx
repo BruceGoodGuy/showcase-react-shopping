@@ -1,28 +1,35 @@
 import React, { Fragment } from 'react'
-import { Card, Image } from 'antd';
-const { Meta } = Card;
-const Template = () => {
+import { Card, Typography, Row, Col, Pagination } from 'antd';
+import ProductItem from '../ProductItem';
+
+const { Title } = Typography;
+const Template = (props) => {
 	return (
 		<Fragment>
-			<Card
-				loading={true}
-				hoverable
-				style={{ width: 500 }}
-				cover={
-					<Image
-						width={200}
-						src={`https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png?1`}
-						placeholder={
-							<Image
-								preview={false}
-								src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png?x-oss-process=image/blur,r_50,s_50/quality,q_1/resize,m_mfit,h_200,w_200"
-								width={200}
-							/>
-						}
-					/>
+			<Card title={props.title} extra={<a href="#">More</a>} >
+				<Typography>
+					<Title level={2} className="title"></Title>
+				</Typography>
+				<Row gutter={16}>
+					<Col span={24} className="product-item" lg={{ span: 6 }} md={{ span: 8 }}>
+						<ProductItem badge={{ text: "asdasdd", color: "red", status: 'error', title: 'xxxxxxxx', dot: true }} />
+					</Col>
+					<Col span={24} className="product-item" lg={{ span: 6 }} md={{ span: 8 }}>
+						<ProductItem />
+					</Col>
+					<Col span={24} className="product-item" lg={{ span: 6 }} md={{ span: 8 }}>
+						<ProductItem />
+					</Col>
+					<Col span={24} className="product-item" lg={{ span: 6 }} md={{ span: 8 }}>
+						<ProductItem />
+					</Col>
+				</Row>
+				{
+					props.pagination ?
+						<Row justify="center" gutter={16}>
+							<Pagination defaultCurrent={1} total={50} />
+						</Row> : ""
 				}
-			>
-				<Meta title="Europe Street beat" description="www.instagram.com" />
 			</Card>
 		</Fragment>
 	)

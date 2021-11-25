@@ -1,0 +1,17 @@
+.ProductPage .wrap-product-detail{
+    margin-top: 1em;
+    padding: 0 1em;
+}
+.ProductPage .wrap-product-detail h3.ant-typography{
+    margin: 0.2em 0;
+}
+.ProductPage .wrap-product-detail .form-buy{
+    margin-top: 1em;
+}
+.ProductPage .wrap-product-detail .form-buy .ant-row.ant-form-item{
+    margin-bottom: 1em;
+}
+
+.ProductPage .wrap-product-detail .form-buy .btn-buy{
+    margin-right: .5em;
+}

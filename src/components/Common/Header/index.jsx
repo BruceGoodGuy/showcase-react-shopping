@@ -13,13 +13,14 @@ function Template() {
 	const location = useLocation();
 	const mainItems = useMemo( () => [
 		{ id: 1, uri: '/', title: 'HOME' },
-		{ id: 2, uri: '/friends', title: 'FRIENDS' },
+		{ id: 2, uri: '/products', title: 'PRODUCTS' },
 		{ id: 3, uri: '/me', title: 'ME' },
 	], []);
 
 	useEffect(() => {
 		const path = location.pathname;
-		const id = mainItems.find(o => o.uri === path)?.id ?? "/"; 
+		console.log(path)
+		const id = mainItems.find(o => (o.uri === path))?.id ?? "/"; 
 		setPage(String(id))
 	}, [location.pathname, mainItems])
 

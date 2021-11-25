@@ -1,9 +1,10 @@
 import React from 'react'
 import { Outlet } from "react-router-dom";
 import Header from '../../../components/Common/Header';
+import Footer from '../../../components/Common/Footer';
 import { Layout } from 'antd';
-import { Row, Col, Dropdown, Button } from 'antd';
-const { Footer, Content } = Layout;
+import { Row, Col } from 'antd';
+const { Content } = Layout;
 
 
 const template = () => {
@@ -19,7 +20,7 @@ const template = () => {
 					</Row>
 				</Content>
 			</Layout>
-			<Footer>Footer</Footer>
+			<Footer />
 		</Layout>
 	)
 }

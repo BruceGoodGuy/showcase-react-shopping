@@ -7,8 +7,10 @@ import Main from '../containers/layouts/Main'
 // views
 // import About from '../containers/views/Main/About'
 import Home from '../containers/views/Main/Home'
-import Friends from '../containers/views/Main/Friends'
+import Products from '../containers/views/Main/Products'
 import Me from '../containers/views/Main/Me'
+import Product from '../containers/views/Main/Product'
+
 
 // import Login from '../containers/views/Main/Login'
 
@@ -38,9 +40,10 @@ const routes = () => {
 
 					<Route>
 						<Route path="/" element={<Main />}>
-							<Route path='/' exact element={<Home />} />
-							<Route path='/friends' exact element={<Friends />} />
-							<Route path='/me' exact element={<Me />} />
+							<Route path="/" element={<Home />} />
+							<Route path="products" element={<Products />} />
+							<Route path="product/:productId" element={<Product />} />
+							<Route path="me" element={<Me />} />
 
 							{/* <Route path='/about' element={About} /> */}
 						</Route>

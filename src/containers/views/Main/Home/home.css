@@ -1,0 +1,27 @@
+.HomePage{
+    margin-top: 1em;
+}
+
+.HomePage .ant-card .ant-card-head-title {
+    text-align: left;
+    font-size: 2em;
+}
+
+.HomePage .ant-card .product-item{
+    padding-bottom: 8px;
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
