@@ -10,6 +10,11 @@ import Home from '../containers/views/Main/Home'
 import Products from '../containers/views/Main/Products'
 import Me from '../containers/views/Main/Me'
 import Product from '../containers/views/Main/Product'
+import User from '../containers/views/Main/User'
+import Carts from '../containers/views/Main/Carts'
+import Payment from '../containers/views/Main/Payment'
+
+
 
 
 // import Login from '../containers/views/Main/Login'
@@ -44,7 +49,9 @@ const routes = () => {
 							<Route path="products" element={<Products />} />
 							<Route path="product/:productId" element={<Product />} />
 							<Route path="me" element={<Me />} />
-
+							<Route path="user" element={<User />} />
+							<Route path="carts" element={<Carts />} />
+							<Route path="payment" element={<Payment />} />
 							{/* <Route path='/about' element={About} /> */}
 						</Route>
 					</Route>

@@ -4,7 +4,7 @@ import './header.css';
 import { Row, Col, Dropdown, Button } from 'antd';
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
-import { useNavigate, useLocation  } from "react-router-dom";
+import { useNavigate, useLocation, Link  } from "react-router-dom";
 
 const { Header } = Layout;
 function Template() {
@@ -25,25 +25,10 @@ function Template() {
 	}, [location.pathname, mainItems])
 
 	const menu = (<Menu>
-		<Menu.Item key="setting">
-			<a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-				Setting
-			</a>
-		</Menu.Item>
-		<Menu.Item key="notification">
-			<a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-				Notification
-			</a>
-		</Menu.Item>
-		<Menu.Item key="chat">
-			<a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-				Chat
-			</a>
-		</Menu.Item>
-		<Menu.Item key="logout">
-			<a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-				Logout
-			</a>
+		<Menu.Item key="carts">
+			<Link rel="noopener noreferrer" to="carts">
+				Carts
+			</Link>
 		</Menu.Item>
 	</Menu>
 	);
