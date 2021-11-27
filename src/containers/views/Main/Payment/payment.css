@@ -1,8 +1,18 @@
-.PaymentPage{
+.PaymentPage {
     margin-top: 1em;
 }
-.PaymentPage .wrap-payment{
+.PaymentPage .wrap-payment {
     margin-top: 1em;
     background-color: white;
     padding: 1em;
+}
+
+.PaymentPage .wrap-payment .ant-list-footer {
+    display: flex;
+    justify-content: end;
+}
+
+.PaymentPage .wrap-payment .next-step,
+.PaymentPage .wrap-payment .wrap-info {
+    margin-top: 1em;
 }

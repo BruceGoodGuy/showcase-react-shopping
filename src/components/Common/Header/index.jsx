@@ -4,23 +4,21 @@ import './header.css';
 import { Row, Col, Dropdown, Button } from 'antd';
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
-import { useNavigate, useLocation, Link  } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
 const { Header } = Layout;
 function Template() {
 	const [selectedPage, setPage] = useState('1');
 	let navigate = useNavigate();
 	const location = useLocation();
-	const mainItems = useMemo( () => [
+	const mainItems = useMemo(() => [
 		{ id: 1, uri: '/', title: 'HOME' },
-		{ id: 2, uri: '/products', title: 'PRODUCTS' },
-		{ id: 3, uri: '/me', title: 'ME' },
-	], []);
+		{ id: 2, uri: '/products', title: 'PRODUCTS' }], []);
 
 	useEffect(() => {
 		const path = location.pathname;
 		console.log(path)
-		const id = mainItems.find(o => (o.uri === path))?.id ?? "/"; 
+		const id = mainItems.find(o => (o.uri === path))?.id ?? "/";
 		setPage(String(id))
 	}, [location.pathname, mainItems])
 
@@ -28,6 +26,11 @@ function Template() {
 		<Menu.Item key="carts">
 			<Link rel="noopener noreferrer" to="carts">
 				Carts
+			</Link>
+		</Menu.Item>
+		<Menu.Item key="order">
+			<Link rel="noopener noreferrer" to="order">
+				Checking Order
 			</Link>
 		</Menu.Item>
 	</Menu>

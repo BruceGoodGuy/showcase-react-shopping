@@ -10,7 +10,7 @@ const { Title } = Typography;
 
 
 const Template = () => {
-    useDocumentTitle("Collections")
+    useDocumentTitle("Products")
     const marks = {
         0: '10$',
         50: '50$',

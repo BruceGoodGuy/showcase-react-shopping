@@ -13,6 +13,8 @@ import Product from '../containers/views/Main/Product'
 import User from '../containers/views/Main/User'
 import Carts from '../containers/views/Main/Carts'
 import Payment from '../containers/views/Main/Payment'
+import Order from '../containers/views/Main/Order'
+
 
 
 
@@ -52,6 +54,7 @@ const routes = () => {
 							<Route path="user" element={<User />} />
 							<Route path="carts" element={<Carts />} />
 							<Route path="payment" element={<Payment />} />
+							<Route path="order" element={<Order />} />
 							{/* <Route path='/about' element={About} /> */}
 						</Route>
 					</Route>
